@@ -41,3 +41,6 @@ thumbs/
 imanager/
 _notes/
 tmp/
+*.log
+log/
+config/database.yml
