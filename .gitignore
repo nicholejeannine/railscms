@@ -16,7 +16,6 @@ nbproject
 .node_history
 bower_components
 *.bowerrc
-bin/
 .powenv
 *~
 *#
