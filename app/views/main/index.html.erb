@@ -9,7 +9,7 @@
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-			<img class="first-slide" src="images/Triton.GIF">
+			<img class="first-slide" src="<%=@images[0]%>">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Scuba Activities</h1>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img class="second-slide" src="images/Hermi.GIF">
+			<img class="second-slide" src="<%= @images[1] %>">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Because its fun</h1>
@@ -27,12 +27,12 @@
 			</div>
 		</div>
 		<div class="item">
-			<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+			<img class="third-slide" src="<%= @images[2] %>" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>One more for good measure.</h1>
 					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+					<p><a class="btn btn-sm btn-primary" href="#" role="button">Browse gallery</a></p>
 				</div>
 			</div>
 		</div>
