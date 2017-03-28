@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :photos
+  resources :albums
   resources :albums do
-    resources :photos
-  end
+    end
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

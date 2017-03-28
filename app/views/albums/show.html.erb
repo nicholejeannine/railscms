@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <p>
   <strong>Title:</strong>
   <%= @album.title %>
@@ -11,6 +13,11 @@
 <p>
   <strong>Cover:</strong>
   <%= @album.cover %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @album.user %>
 </p>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |

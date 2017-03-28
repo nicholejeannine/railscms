@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 20170323204649) do
     t.string   "title"
     t.text     "description", limit: 65535
     t.string   "cover"
+    t.integer  "user_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["title"], name: "index_albums_on_title", unique: true, using: :btree
+    t.index ["user_id"], name: "index_albums_on_user_id", using: :btree
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -39,5 +41,6 @@ ActiveRecord::Schema.define(version: 20170323204649) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "albums", "users"
   add_foreign_key "photos", "albums"
 end
