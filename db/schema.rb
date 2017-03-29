@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170328181820) do
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "url"
+    t.string   "url",        null: false
     t.string   "caption"
     t.integer  "sort_order", null: false
     t.integer  "album_id"
