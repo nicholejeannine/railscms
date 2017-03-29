@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170328181820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["album_id"], name: "index_photos_on_album_id", using: :btree
+    t.index ["sort_order"], name: "index_photos_on_sort_order", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

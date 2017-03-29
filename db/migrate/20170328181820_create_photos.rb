@@ -8,5 +8,7 @@ class CreatePhotos < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :photos, :sort_order, unique: true
+
   end
 end
