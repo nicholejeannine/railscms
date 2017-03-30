@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  resources :photos
-  resources :albums
-  resources :albums do
+  devise_for :users
+  authenticated :user do
+    resources :albums do
+      resources :photos
     end
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  end
   root to: 'main#index'
 end
