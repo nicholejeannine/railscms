@@ -1,3 +1,4 @@
+public/system
 .env
 .sass-cache
 *.css.map

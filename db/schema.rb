@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170330060032) do
+ActiveRecord::Schema.define(version: 20170402044836) do
 
   create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",                     null: false
@@ -24,14 +24,11 @@ ActiveRecord::Schema.define(version: 20170330060032) do
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "url",        null: false
-    t.string   "caption"
-    t.integer  "sort_order", null: false
-    t.integer  "album_id"
+    t.string   "image_uid",  null: false
+    t.string   "title",      null: false
+    t.integer  "sort_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_photos_on_album_id", using: :btree
-    t.index ["sort_order"], name: "index_photos_on_sort_order", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -53,5 +50,4 @@ ActiveRecord::Schema.define(version: 20170330060032) do
   end
 
   add_foreign_key "albums", "users"
-  add_foreign_key "photos", "albums"
 end

@@ -1,5 +1,6 @@
 class Photo < ApplicationRecord
-  belongs_to :album
+  dragonfly_accessor :image
+  # belongs_to :album
   before_save :assign_sort_order
   
   # TODO: WE ACTUALLY WANT SORT ORDER TO BE UNIQUE FOR A GIVEN ALBUM, NOT THE WHOLE TABLE
