@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   before_action :get_images
+  skip_before_action :authenticate_user!
   def index
   end
   

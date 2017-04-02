@@ -4,8 +4,10 @@ one:
   title: MyString
   description: MyText
   cover: MyString
+  user: one
 
 two:
   title: MyString
   description: MyText
   cover: MyString
+  user: two

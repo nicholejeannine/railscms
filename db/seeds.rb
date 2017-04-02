@@ -8,3 +8,10 @@
 if User.count == 0
 User.create(:email => 'admin@admin.com', :name => 'admin', :password => 'password')
 end
+
+if Album.count == 0
+  Album.create([{title: "First Album", description: "First description", user_id: 1},{title: "Second Album", description: "Second description", user_id: 1}])
+  Album.first.photos.create([{url: '/albums/1/photos/1', caption: 'ahhh a photo'}, {url: '/albums/1/photos/2', caption: 'just not blank!'}])
+end
+
+
