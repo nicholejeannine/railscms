@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!, except: :destroy
+
   # Login page - sessions/new.html.erb
   def new
   end
@@ -11,7 +13,6 @@ class SessionsController < ApplicationController
     if user
       #correct email / password
       session[:user_id] = user.id
-      flash[:success] = 'You are now logged in.'
       redirect_to root_path
     else
       #wrong email or password
@@ -24,7 +25,6 @@ class SessionsController < ApplicationController
   # Logout action
   def destroy
     session[:user_id] = nil
-    flash[:info] = "You are logged out."
     redirect_to login_path
   end
 end
