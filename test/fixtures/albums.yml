@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  cover: MyString
-  user: one
+  title: Album 1
+  description: An album with a description
+  cover: Nothing here yet
+  user_id: 1
 
 two:
-  title: MyString
-  description: MyText
-  cover: MyString
-  user: two
+  title: Album 2
+  description: Another description
+  cover: Something
+  user_id: 1
