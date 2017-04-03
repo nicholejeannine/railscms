@@ -13,10 +13,15 @@
 
 	<tbody>
 	<% @photos.each do |photo| %>
-			<tr>
-				<td><%= photo.title %></td>
-				<td><%= link_to image_tag(photo.image.thumb('100x100').url), photo.image.url %></td>
-			</tr>
+			<ul>
+				<li>
+				<p><%= photo.title %></p>
+				<p>Thumbnail:</p>
+				<p class="image"><%= link_to image_tag(photo.image.thumb('100x100').url), photo.image.url %></p>
+				<p>Full:</p>
+				<p class="image"><%= link_to image_tag(photo.image.url), photo.image.url %></p>
+				</li>
+			</ul>
 	<% end %>
 	</tbody>
 </table>
