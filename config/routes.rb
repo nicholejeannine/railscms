@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pages
   devise_for :users
   authenticated :user do
     resources :albums

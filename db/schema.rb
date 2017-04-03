@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402044836) do
+ActiveRecord::Schema.define(version: 20170403225946) do
 
   create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",                     null: false
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20170402044836) do
     t.datetime "updated_at",                null: false
     t.index ["title"], name: "index_albums_on_title", unique: true, using: :btree
     t.index ["user_id"], name: "index_albums_on_user_id", using: :btree
+  end
+
+  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "heading",                  null: false
+    t.string   "label",                    null: false
+    t.integer  "sort_order",               null: false
+    t.text     "content",    limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["label"], name: "index_pages_on_label", unique: true, using: :btree
+    t.index ["sort_order"], name: "index_pages_on_sort_order", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pages_on_user_id", using: :btree
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -50,4 +63,5 @@ ActiveRecord::Schema.define(version: 20170402044836) do
   end
 
   add_foreign_key "albums", "users"
+  add_foreign_key "pages", "users"
 end

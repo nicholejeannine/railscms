@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  heading: MyString
+  label: MyString
+  sort_order: 1
+  content: MyText
+  user: one
+
+two:
+  heading: MyString
+  label: MyString
+  sort_order: 1
+  content: MyText
+  user: two
