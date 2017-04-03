@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
     get 'photos' => "photos#index"
   end
-  root to: 'main#index'
+  root to: 'public#index'
 end
