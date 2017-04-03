@@ -126,7 +126,13 @@
 	<!-- FOOTER -->
 	<footer>
 		<p class="pull-right"><a href="#">Back to top</a></p>
-		<p>All Images in these pages are &copy;2003-2017</p>
+		<p>All Images in these pages are
+			<% if user_signed_in? %>
+					<%= link_to  "©", destroy_user_session_path, method: :delete %>
+					<% else %>
+					<%= link_to "©", new_user_session_path %>
+					<% end %>
+			2003-2017</p>
 	</footer>
 
 </div><!-- /.container -->
