@@ -9,7 +9,8 @@
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-			<img class="first-slide" src="<%=@images[0]%>">
+
+			<img class="first-slide" src="<%=@photos[0].image.url%>">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Scuba Activities</h1>
@@ -18,7 +19,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img class="second-slide" src="<%= @images[1] %>">
+			<img class="second-slide" src="<%= @photos[1].image.url %>">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Because its fun</h1>
@@ -27,7 +28,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img class="third-slide" src="<%= @images[2] %>" alt="Third slide">
+			<img class="third-slide" src="<%= @photos[2].image.url %>" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>One more for good measure.</h1>
