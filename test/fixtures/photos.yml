@@ -1,11 +1,23 @@
+# == Schema Information
+#
+# Table name: photos
+#
+#  id         :integer          not null, primary key
+#  image_uid  :string(255)      not null
+#  title      :string(255)      not null
+#  sort_order :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  caption: MyString
-  album: one
+  image_uid: string
+  title: A Picture
+  sort_order: 1
 
 two:
-  url: MyString
-  caption: MyString
-  album: two
+  image_uid: string3
+  title: My Picture
+  sort_order: 2

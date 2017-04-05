@@ -1,29 +1,27 @@
-<h1>Photos</h1>
+<h2>Photos</h2>
+
+<p id="notice"><%= notice %></p>
 
 <table>
-  <thead>
-    <tr>
-      <th>Url</th>
-      <th>Caption</th>
-      <th>Album</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	<thead>
+	<tr>
+		<th>Title</th>
+		<th>Image</th>
+		<th colspan="1"></th>
+	</tr>
+	</thead>
 
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.url %></td>
-        <td><%= photo.caption %></td>
-        <td><%= photo.album %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+	<% @photos.each do |photo| %>
+			<ul>
+				<li>
+				<p><%= photo.title %></p>
+				<p>Thumbnail:</p>
+				<p class="image"><%= link_to image_tag(photo.image.thumb('100x100').url), photo.image.url %></p>
+				<p>Full:</p>
+				<p class="image"><%= link_to image_tag(photo.image.url), photo.image.url %></p>
+				</li>
+			</ul>
+	<% end %>
+	</tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Photo', new_photo_path %>
