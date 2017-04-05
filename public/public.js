@@ -1,4 +1,4 @@
 $(function() {
-	$( "p" ).text( "The DOM is now loaded and can be manipulated." );
+	$(".carousel-inner .item:first" ).addClass('active');
 });
  

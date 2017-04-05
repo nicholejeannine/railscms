@@ -4,7 +4,7 @@
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
 		<% @photos.each do |photo| %>
-		<li data-target="#myCarousel" data-slide-to='<%="#{photo.sort_order + 1}"%>' class="active"></li>
+		<li data-target="#myCarousel" data-slide-to='<%="#{photo.sort_order - 1}"%>' class="active"></li>
 		<% end %>
 	</ol>
 	<div class="carousel-inner" role="listbox">
@@ -14,7 +14,8 @@
 			<div class="container">
 				<div class="carousel-caption">
 					<h1><%= photo.title %></h1>
-					<p><a class="btn btn-sm btn-primary" href="pelagicus.html" role="button"><i class="glyphicon glyphicon-arrow"></i></a></p>
+					<p><a class="btn btn-sm btn-primary" href="pelagicus.html" role="button"><i class="glyphicon glyphicon-play
+						"></i></a></p>
 				</div>
 			</div>
 		</div>
